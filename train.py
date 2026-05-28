@@ -14,7 +14,7 @@ SEED = 42
 np.random.seed(SEED)
 tf.random.set_seed(SEED)
 
-print("Setup Done ✅")
+print("Setup Done ")
 
 # =========================
 # MLFLOW SETUP
@@ -66,7 +66,7 @@ train_data = data.take(train_size)
 
 test_data = data.skip(train_size)
 
-print("Data Ready ✅")
+print("Data Ready")
 
 # =========================
 # BUILD MODEL
@@ -256,8 +256,7 @@ with open("model_quant.tflite", "wb") as f:
 
     f.write(tflite_model)
 
-print("Quantized Model Saved ✅")
-
+print("Quantized Model Saved ")
 mlflow.log_artifact("model_quant.tflite")
 
 # =========================
@@ -266,7 +265,7 @@ mlflow.log_artifact("model_quant.tflite")
 
 model.save("model.h5")
 
-print("Model Saved ✅")
+print("Model Saved ")
 
 mlflow.tensorflow.log_model(
     model,
@@ -277,4 +276,4 @@ mlflow.log_artifact("model.h5")
 
 mlflow.end_run()
 
-print("MLflow Tracking Completed ✅")
+print("MLflow Tracking Completed ")
