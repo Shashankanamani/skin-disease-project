@@ -1,0 +1,9 @@
+venv/
+dataset/
+mlruns/
+*.h5
+*.tflite
+*.zip
+__pycache__/
+*.png
+mlflow.db
