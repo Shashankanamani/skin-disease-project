@@ -10,9 +10,9 @@ pipeline {
         }
 
         stage('Verify Application') {
-    steps {
-        bat 'python -c "print(''Application check successful'')"'
-    }
-}
+            steps {
+                echo 'Application check successful'
+            }
+        }
     }
 }
